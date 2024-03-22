@@ -1,0 +1,76 @@
+{
+  "name": "assumendarerum",
+  "version": "1.0.0",
+  "description": "ctx-core nanostores",
+  "keywords": [
+    "quam",
+    "adipisci",
+    "pnpm"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DamarisSchulist/assumendarerum.git"
+  },
+  "license": "Apache-2.0",
+  "author": "JaydeJakubowski",
+  "type": "module",
+  "files": [
+    "*.d.ts",
+    "*.js",
+    "*.json",
+    "_nanostores",
+    "_types",
+    "atom",
+    "atom_pair",
+    "be_atom_triple",
+    "be_computed_pair",
+    "computed",
+    "computed__set_a",
+    "computed__set_o",
+    "computed_set_a",
+    "computed_set_o",
+    "listen_change",
+    "listen_once",
+    "listen_prev",
+    "neq_atom",
+    "neql_atom",
+    "readable_fn",
+    "setter_computed",
+    "subscribe_wait",
+    "subscribe_wait_timeout",
+    "writable_atom___mix"
+  ],
+  "types": "./index.d.ts",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": ":",
+    "clean": ":",
+    "exec": "$@",
+    "prepublishOnly": "pnpm clean && pnpm build && pnpm test",
+    "test": "pnpm run /^test:/",
+    "test:types": "check-dts",
+    "test:unit": "tsx node_modules/uvu/bin.js . '\\.test\\.(ts|js)$'",
+    "disable:test:unit:coverage": "c8 pnpm test:unit"
+  },
+  "dependencies": {
+    "ctx-core": "^6.5.8",
+    "nanostores": "btakita/nanostores#9f42323d8ddfa65a76851085f6a46a5e2fa51f1e"
+  },
+  "devDependencies": {
+    "@sinonjs/fake-timers": "^11.2.2",
+    "@types/sinonjs__fake-timers": "^8.1.5",
+    "c8": "^9.1.0",
+    "check-dts": "^0.7.2",
+    "eslint": "^8.57.0",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2",
+    "uvu": "^0.5.6"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false
+}
